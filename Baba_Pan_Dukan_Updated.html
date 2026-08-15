@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="hi"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#061b12"><title>Baba Pan Dukan</title>
+<style>
+:root{--b:#050807;--g:#0b2d1d;--g2:#123f28;--gold:#e0b84f;--w:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--b);color:var(--w);font-family:Arial,sans-serif}
+header{padding:28px 16px;text-align:center;background:linear-gradient(135deg,#020403,#0d3924);border-bottom:2px solid var(--gold)}
+.logo{width:90px;height:90px;margin:auto;border:3px solid var(--gold);border-radius:50%;background:#fff;color:#07170e;display:grid;place-items:center;font-size:28px;font-weight:900}
+h1{color:#f1d477;margin:12px 0 5px}.tag{color:#ddd}
+main{max-width:1050px;margin:auto;padding:18px}.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{flex:1;min-width:150px;padding:15px;border-radius:14px;text-align:center;text-decoration:none;font-weight:800}
+.wa{background:#159447;color:white}.call{background:var(--g2);color:white;border:1px solid var(--gold)}
+.search{width:100%;margin:18px 0;padding:16px;border-radius:14px;border:1px solid #41644f;background:#101613;color:white;font-size:17px}
+h2{text-align:center;color:#f1d477}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:linear-gradient(#0d3422,#07130e);border:1px solid #4b7058;border-radius:18px;overflow:hidden}
+.photo{height:190px;display:grid;place-items:center;background:radial-gradient(circle,#3f7f3d,#092719 65%);font-size:80px}
+.info{padding:16px}.info h3{margin:0;color:#f1d477;font-size:22px}.cat{color:#aaa;margin-top:5px}.price{font-size:25px;font-weight:900;margin:12px 0}.order{display:block;background:#159447;color:white;text-align:center;padding:12px;border-radius:11px;text-decoration:none;font-weight:800}
+footer{text-align:center;padding:24px;border-top:2px solid var(--gold);background:#06130d;color:#ddd}footer strong{color:#f1d477}
+</style></head><body>
+<header><div class="logo">BP</div><h1>Baba Pan Dukan</h1><p class="tag">Har Paan, Ek Naya Ehsaas</p><p>Mangobander, Khaira, Jamui, Bihar – 811305</p></header>
+<main><div class="actions"><a class="btn wa" href="https://wa.me/" target="_blank">💬 WhatsApp Order</a><a class="btn call" href="tel:">📞 Call Now</a></div>
+<input id="search" class="search" placeholder="🔎 Product search karein..." oninput="render()">
+<h2>🌿 Our Special Paan</h2><section id="products" class="grid"></section></main>
+<footer><p><strong>Customer Care</strong> • <strong>Customer Feedback</strong></p><p>⭐ Aapka feedback hamare liye important hai ⭐</p><p>© Baba Pan Dukan</p></footer>
+<script>
+const products=[
+["Meetha Paan","₹20","🍃","Paan"],["Jarda Paan","₹20","🌿","Paan"],
+["Sada Paan","₹10","🍃","Paan"],["Magahi Paan","₹20","🌱","Paan"],["Special Paan","₹38","🌿","Special Paan"]];
+function render(){let q=document.getElementById("search").value.toLowerCase();document.getElementById("products").innerHTML=products.filter(p=>p[0].toLowerCase().includes(q)).map(p=>`<article class="card"><div class="photo">${p[2]}</div><div class="info"><h3>${p[0]}</h3><div class="cat">${p[3]}</div><div class="price">${p[1]}</div><a class="order" href="https://wa.me/" target="_blank">💬 WhatsApp Order</a></div></article>`).join("")}render();
+</script></body></html>
