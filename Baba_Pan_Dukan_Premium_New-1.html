@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07110d">
+<title>Baba Pan Dukan | Premium Paan</title>
+<style>
+:root{--bg:#050806;--panel:#0b1510;--panel2:#0f1d15;--green:#19d66b;--green2:#0fa653;--gold:#f4d27a;--text:#f4fff8;--muted:#9bb0a3}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% -10%,#123d27 0,#07110d 38%,#050806 75%);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{position:sticky;top:0;z-index:20;background:rgba(5,8,6,.9);backdrop-filter:blur(14px);border-bottom:1px solid #173224}
+.nav{max-width:1100px;margin:auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{display:flex;align-items:center;gap:10px}.logo{width:52px;height:52px;border-radius:16px;background:linear-gradient(145deg,#1ce875,#087c3b);display:grid;place-items:center;box-shadow:0 0 25px #19d66b55;border:1px solid #7affb1}
+.logo svg{width:40px;height:40px}.brand h1{font-size:18px;margin:0}.brand small{color:var(--gold)}
+.nav a{color:#dff7e8;text-decoration:none;margin-left:12px;font-weight:700}
+.hero{max-width:1100px;margin:auto;padding:55px 18px 35px;text-align:center}.badge{display:inline-block;border:1px solid #246a43;color:#8ff7b9;background:#0b2116;padding:7px 13px;border-radius:999px;font-size:13px}
+.hero h2{font-size:clamp(36px,8vw,70px);line-height:1;margin:18px 0 12px}.hero h2 span{color:var(--green)}.hero p{max-width:650px;margin:0 auto;color:var(--muted);font-size:16px}
+.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:25px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:13px;text-decoration:none;font-weight:800;border:1px solid #24583b}.primary{background:var(--green);color:#031008}.secondary{background:#0c1912;color:white}
+.section{max-width:1100px;margin:auto;padding:25px 18px}.section h3{text-align:center;font-size:30px;margin:10px 0 6px}.section>p{text-align:center;color:var(--muted);margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:22px}
+.card{background:linear-gradient(160deg,#122219,#09110d);border:1px solid #1d4b31;border-radius:20px;overflow:hidden;box-shadow:0 12px 35px #0008;cursor:pointer;transition:.25s}.card:hover{transform:translateY(-5px);border-color:#31e878}
+.photo{height:190px;display:grid;place-items:center;background:radial-gradient(circle,#1a5c38,#08110c 70%);position:relative}.photo:after{content:"";position:absolute;inset:14px;border:1px solid #55e89433;border-radius:16px}
+.paan{width:145px;height:90px;background:linear-gradient(135deg,#8be36a,#197c3e);border-radius:12px 60px 12px 60px;transform:rotate(-15deg);box-shadow:0 18px 30px #0009;position:relative;border:2px solid #b8ff8d}.paan:before{content:"";position:absolute;left:45%;top:5px;width:4px;height:80px;background:#d8ffae;transform:rotate(22deg);opacity:.7}.paan:after{content:"";position:absolute;width:28px;height:28px;border-radius:50%;background:#e9d58b;left:56px;top:30px;box-shadow:18px -8px #cfb56c,-18px 9px #b79550}
+.info{padding:16px}.info h4{margin:0 0 7px;font-size:19px}.price{color:var(--gold);font-weight:900;font-size:18px}.tag{float:right;color:#8ff7b9;font-size:12px;background:#0a2717;padding:5px 8px;border-radius:999px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:22px}.feature{background:#09130e;border:1px solid #183a27;border-radius:16px;padding:18px;text-align:center}.feature b{display:block;margin:8px 0}.feature span{color:var(--muted);font-size:13px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}.box{background:#0a1510;border:1px solid #1b4930;border-radius:18px;padding:20px}.box h4{margin-top:0}.box a{color:#a6ffc6;text-decoration:none;font-weight:800}.map{width:100%;height:180px;border:0;border-radius:14px;background:#0d1d14}
+footer{text-align:center;color:#7f9588;padding:35px 18px;border-top:1px solid #173224;margin-top:35px}
+.modal{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;padding:18px;z-index:50}.modal.open{display:flex}.dialog{max-width:430px;width:100%;background:#0b1510;border:1px solid #2b7047;border-radius:22px;padding:22px;box-shadow:0 30px 80px #000}.close{float:right;background:none;border:0;color:#fff;font-size:28px}.dialog .bigprice{font-size:30px;color:var(--gold);font-weight:900;margin:12px 0}.order{display:block;text-align:center;background:var(--green);color:#031008;text-decoration:none;font-weight:900;padding:15px;border-radius:13px;margin-top:18px}
+@media(max-width:700px){.nav a{display:none}.contact{grid-template-columns:1fr}.hero{padding-top:38px}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+<div class="brand">
+<div class="logo" aria-label="Baba Pan Dukan logo">
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M15 55C35 18 74 12 88 25C74 67 47 86 15 78C28 70 35 57 15 55Z" fill="#d8ffae"/><path d="M24 68C44 62 62 45 82 28" stroke="#08733a" stroke-width="6" fill="none"/><circle cx="63" cy="37" r="7" fill="#f4d27a"/></svg>
+</div><div><h1>Baba Pan Dukan</h1><small>Premium Paan • Fresh Taste</small></div>
+</div>
+<div><a href="#menu">Menu</a><a href="#contact">Contact</a></div>
+</div></header>
+
+<section class="hero">
+<div class="badge">🌿 100% Fresh • Premium Quality</div>
+<h2>Baba Pan <span>Dukan</span></h2>
+<p>Har bite mein royal taste. Apna favourite paan select kijiye, price dekhiye aur seedha WhatsApp par order kijiye.</p>
+<div class="actions"><a class="btn primary" href="#menu">🍃 Paan Dekhein</a><a class="btn secondary" href="tel:9113412347">📞 Call Now</a></div>
+</section>
+
+<section class="section" id="menu">
+<h3>Our Special Paan</h3><p>Card par tap karke naam, price aur WhatsApp order option dekhein.</p>
+<div class="grid">
+<div class="card" onclick="openItem('Meetha Paan','₹20')"><div class="photo"><div class="paan"></div></div><div class="info"><span class="tag">Popular</span><h4>Meetha Paan</h4><div class="price">₹20</div></div></div>
+<div class="card" onclick="openItem('Jarda Paan','₹20')"><div class="photo"><div class="paan"></div></div><div class="info"><span class="tag">Classic</span><h4>Jarda Paan</h4><div class="price">₹20</div></div></div>
+<div class="card" onclick="openItem('Special Paan','₹38')"><div class="photo"><div class="paan"></div></div><div class="info"><span class="tag">Special</span><h4>Special Paan</h4><div class="price">₹38</div></div></div>
+<div class="card" onclick="openItem('Chocolate Paan','₹40')"><div class="photo"><div class="paan"></div></div><div class="info"><span class="tag">Premium</span><h4>Chocolate Paan</h4><div class="price">₹40</div></div></div>
+<div class="card" onclick="openItem('Royal Paan','₹50')"><div class="photo"><div class="paan"></div></div><div class="info"><span class="tag">Royal</span><h4>Royal Paan</h4><div class="price">₹50</div></div></div>
+</div>
+</section>
+
+<section class="section">
+<h3>Why Baba Pan Dukan?</h3>
+<div class="features">
+<div class="feature">🍃<b>Fresh Paan</b><span>Freshly prepared for every order.</span></div>
+<div class="feature">⚡<b>Quick Order</b><span>WhatsApp par direct order.</span></div>
+<div class="feature">💚<b>Premium Taste</b><span>Special ingredients & royal flavour.</span></div>
+<div class="feature">⭐<b>Customer First</b><span>Feedback aur support available.</span></div>
+</div>
+</section>
+
+<section class="section" id="contact">
+<h3>Order & Contact</h3>
+<div class="contact">
+<div class="box"><h4>📲 WhatsApp Order</h4><p>Order ke liye WhatsApp karein:</p><a href="https://wa.me/918102856181?text=Namaste%20Baba%20Pan%20Dukan%2C%20mujhe%20paan%20order%20karna%20hai." target="_blank">8102856181 — WhatsApp Order</a><hr style="border-color:#183a27;margin:18px 0"><h4>📞 Customer Care</h4><a href="tel:9113412347">9113412347 — Call Now</a></div>
+<div class="box"><h4>📍 Address & Google Location</h4><p style="color:#9bb0a3">Baba Pan Dukan — Apni shop location yahan set karein.</p><a href="https://maps.app.goo.gl/uQb42yUqo8UnBDfG7" target="_blank">🗺️ Open Google Maps Location</a>
+<div style="margin-top:14px">
+<iframe class="map" src="https://www.google.com/maps?q=Baba%20Pan%20Dukan%2C%20R7CC%20929%2C%20Mangobander%20Khaira%2C%20Bihar%20811305&output=embed" loading="lazy" allowfullscreen></iframe>
+</div>
+<p style="color:#7f9588;font-size:12px;margin-bottom:0">📍 Baba Pan Dukan, R7CC+929, Mangobander Khaira, Bihar 811305</p></div>
+</div>
+</section>
+
+<section class="section">
+<h3>Feedback</h3><p>Aapka feedback hamare liye important hai.</p>
+<div class="actions"><a class="btn primary" href="https://wa.me/918102856181?text=Feedback%20for%20Baba%20Pan%20Dukan%3A%20" target="_blank">💬 WhatsApp Feedback</a><a class="btn secondary" href="tel:9113412347">Customer Care</a></div>
+</section>
+
+<footer>© 2026 Baba Pan Dukan • Premium Paan Experience</footer>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeItem()"><div class="dialog">
+<button class="close" onclick="closeItem()">×</button><div class="badge">🍃 Baba Pan Dukan</div><h2 id="itemName"></h2><div class="bigprice" id="itemPrice"></div><p style="color:#9bb0a3">Freshly prepared. WhatsApp par order karne ke liye neeche button dabayein.</p><a class="order" id="orderBtn" target="_blank">📲 WhatsApp Order</a>
+</div></div>
+
+<script>
+function openItem(name,price){
+document.getElementById('itemName').textContent=name;
+document.getElementById('itemPrice').textContent=price;
+const msg=encodeURIComponent('Namaste Baba Pan Dukan, mujhe '+name+' order karna hai. Price: '+price);
+document.getElementById('orderBtn').href='https://wa.me/918102856181?text='+msg;
+document.getElementById('modal').classList.add('open');
+}
+function closeItem(){document.getElementById('modal').classList.remove('open')}
+</script>
+</body>
+</html>
